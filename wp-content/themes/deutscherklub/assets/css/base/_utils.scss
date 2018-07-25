@@ -1,0 +1,27 @@
+p:empty {
+  display: none;
+}
+
+.responsive-iframe-wrapper {
+  position: relative;
+  padding-bottom: 75%;
+  overflow: hidden;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+
+  iframe,
+  object,
+  embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+
+.hideOnVideoFullScreen{
+  display: none;
+}

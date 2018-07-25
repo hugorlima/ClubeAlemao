@@ -1,0 +1,92 @@
+.pagination {
+  width: 100%;
+  position: relative;
+  padding: 0;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 6px;
+    overflow: hidden;
+    background-color: $c-white;
+    position: relative;
+
+    a, span {
+      border: 4px;
+      font-weight: 800;
+      color: $c-green-dark;
+      display: inline-block;
+      padding: 0px 25px;
+      border-radius: 0;
+      font-size: 18px;
+      height: 45px;
+      line-height: 45px;
+      margin: 0 0 0 -1px;
+      box-shadow: none;
+      border-left: 1px solid #DFDFDF;
+      border-right: 1px solid #DFDFDF;
+
+      i {
+        color: #898989;
+      }
+
+      &.prev,
+      &.next {
+        position: absolute;
+        top: 0;
+
+        i {
+          color: #e60e2c;
+        }
+      }
+
+      &.prev {
+        left: 0;
+        border-right: 1px solid #DFDFDF;
+      }
+
+      &.next {
+        right: 0;
+        border-left: 1px solid #DFDFDF;
+      }
+
+    }
+
+    span.current,
+    a:hover {
+      background-color: $c-green-lighten;
+      color: $c-green-dark;
+      outline: none;
+      text-decoration: none;
+    }
+
+    span {
+      color: #e8e9e8;
+    }
+  }
+}
+
+$section-header-colors: 'red', 'green', 'blue', 'yellow';
+@each $section-header-color in $section-header-colors {
+  .pagination--themed.pagination--themed-#{$section-header-color} .pagination {
+
+    .nav-links {
+      a, span { color: map-get($palette-colors, #{$section-header-color}-dark); }
+
+      span.current,
+      a:hover {
+        background-color: map-get($palette-colors, #{$section-header-color}-lighten);
+        color: map-get($palette-colors, #{$section-header-color}-dark);
+      }
+    }
+
+  }
+}
+

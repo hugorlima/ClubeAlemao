@@ -1,0 +1,60 @@
+@mixin row($max-width, $padding : 20) {
+  max-width: #{$max-width + (2 * $padding)}px;
+  width: 100%;
+  padding-left: #{$padding}px;
+  padding-right:  #{$padding}px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin aspect-ratio($width, $height) {
+  max-width: 100%;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding-bottom: ($height / $width) * 100%;
+}
+
+@mixin gradient-text($gradient, $bg : 'light') {
+  @supports(mix-blend-mode: lighten) {
+    display: inline-block;
+    position: relative;
+
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0; right: 0; bottom: 0; left: 0;
+
+      background: unquote($gradient);
+      pointer-events: none;
+    }
+
+    @if ($bg == 'light') {
+      color: #000;
+      background: #fff;
+      mix-blend-mode: multiply;
+
+      &::after {
+        mix-blend-mode: screen;
+      }
+    } @else {
+      color: #fff;
+      background: #000;
+      mix-blend-mode: lighten;
+
+      &::after {
+        mix-blend-mode: multiply;
+      }
+    }
+  }
+}
+
+@mixin max-rows($rows) {
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  -webkit-box-orient: vertical !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: $rows !important;
+}

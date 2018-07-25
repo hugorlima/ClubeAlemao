@@ -1,0 +1,100 @@
+.main-footer {
+  background: #219653;
+  padding-top: 60px;
+  padding-bottom: 40px;
+
+  .main-footer--start {
+    text-align: center;
+  }
+
+  .main-footer--end {
+    padding: 25px 15px 0px 15px;
+  }
+
+  .main-footer__divider {
+    background-color: rgba(#fff, 0.3);
+    width: 100%;
+    height: 1px;
+    display: block;
+    margin: 25px auto;
+    max-width: 260px;
+  }
+
+  .main-footer__logos {
+    margin-bottom: 10px;
+
+    .main-footer__logo-opiniao-wrapper {
+      margin-top: 40px;
+    }
+  }
+
+  .main-footer__about,
+  .main-footer__talk-to-us {
+
+    h2 {
+      color: #fff;
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+    }
+
+    a {
+      color: #70E0A8;
+    }
+  }
+
+  .main-footer__talk-to-us {
+    margin-bottom: 20px;
+
+    h2 {
+      display: none;
+    }
+  }
+
+  .main-footer__copyright {
+    color: #70E0A8;
+    font-size: 13px;
+    padding: 0;
+    margin: 0;
+    line-height: 1.2;
+
+    span {
+      display: block;
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .main-footer {
+    .main-footer--end {
+      margin-top: 40px;
+      padding-top: 40px;
+      border-top: 1px solid rgba(#fff, 0.3);
+    }
+
+    .main-footer__divider {
+      display: none;
+    }
+
+    .main-footer__logos,
+    .main-footer__about,
+    .main-footer__talk-to-us,
+    .main-footer__dfpad-wrapper {
+      margin-top: 10px;
+      text-align: left;
+    }
+
+    .main-footer__talk-to-us {
+      h2 {
+        display: block;
+      }
+    }
+
+    .main-footer__copyright {
+      span {
+        display: inline-block;
+      }
+    }
+  }
+}

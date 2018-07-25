@@ -1,0 +1,16 @@
+.anchor {
+  color: $c-white;
+  border-bottom: 2px solid transparent;
+  font-weight: 600;
+  transition: all .2s ease-out;
+
+  &, &:focus, &:visited, &:hover, &:active {
+    outline: none;
+    text-decoration: none;
+  }
+
+  &:hover {
+    border-color: $c-white;
+    color: $c-white;
+  }
+}
