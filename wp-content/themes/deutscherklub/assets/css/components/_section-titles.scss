@@ -1,0 +1,446 @@
+.wrap-section-title{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    align-self: center;
+    flex-direction: column;
+	&.type-a{
+		text-align: center;
+		margin-bottom: 120px;
+		&:before, &:after{
+			background: url("./assets/img/white-wave.png") 0 0 no-repeat;
+			content: "";
+			position: absolute;
+			display: block;
+			width: 100%;
+			height: 19px;
+			top: 22%;
+			z-index: 9999;
+		}
+		&:before{
+			background-position: center right;
+			left: -100%;
+			margin-left: 35%;
+		}
+		&:after{
+			right: -100%;
+			margin-right: 35%;
+		}
+		h2{
+			font-size: 52px;
+			color: $c-white;
+			font-weight: 700;
+			font-style: italic;
+		}
+		h3{
+			font-size: 26px;
+			color: $c-white;
+			font-weight: 600;
+			font-style: italic;
+			text-transform: uppercase;
+			letter-spacing: 10px;
+			margin-left: 200px;
+		}
+	}
+	&.type-b{
+		text-align: center;
+		margin-bottom: 35px;
+		&:before, &:after{
+			content: "";
+			position: absolute;
+			display: block;
+			width: 148%;
+			height: 19px;
+			bottom: 0;
+			z-index: 9;
+		}
+		&:before{
+			background: url("./assets/img/half-white-wave.png") 0 0 no-repeat;
+			right: 77px;
+		}
+		&:after{
+			background: url("./assets/img/half-red-wave.png") 0 0 no-repeat;
+			bottom: 21px;
+			right: 0;
+		}
+		h2{
+			position: relative;
+			display: block;
+			font-size: 28px;
+			color: $c-white;
+			font-weight: 700;
+			font-style: italic;
+			text-transform: uppercase;
+			text-align: left;
+			padding: 60px 40px 70px 0;
+			z-index: 2;
+			&:after{
+				background: url("./assets/img/icons-flags.png") 0 0 no-repeat;
+				content: "";
+				position: absolute;
+				display: block;
+				width: 226px;
+				height: 137px;
+				top: -20px;
+				left: -160px;
+			}
+		}
+		span{
+			background: url("./assets/img/arrows-left.png") 0 0 no-repeat;
+			position: absolute;
+			display: block;
+			top: 70px;
+			right: -35px;
+			width: 121px;
+			height: 100px;
+			z-index: 1;
+		}
+	}
+	&.type-c{
+		text-align: center;
+		&:after{
+			background: url("./assets/img/red-wave.png") 0 0 no-repeat;
+			content: "";
+			position: absolute;
+			display: block;
+			width: 134%;
+			height: 19px;
+			bottom: -30px;
+			right: -40%;
+			z-index: 9;
+		}
+		h2{
+			font-size: 30px;
+			color: $c-white;
+			font-weight: 700;
+			font-style: italic;
+			text-transform: uppercase;
+			letter-spacing: 10px;
+			margin: 0;
+			&:after{
+				background: url("./assets/img/icons-news.png") 0 0 no-repeat;
+				content: "";
+				position: absolute;
+				display: block;
+				width: 270px;
+				height: 111px;
+				top: -32px;
+				left: 36px;
+			}
+		}
+	}
+	&.type-d{
+		text-align: center;
+		margin-bottom: 40px;
+		&:before, &:after{
+			background: url("./assets/img/half-red-wave.png") 0 0 no-repeat;
+			content: "";
+			position: absolute;
+			display: block;
+			width: 134%;
+			height: 19px;
+			top: 22%;
+			z-index: 9999;
+		}
+		&:before{
+			left: -110%;
+		}
+		&:after{
+			right: -120%;
+		}
+		h2{
+			font-size: 40px;
+			color: $c-red;
+			font-weight: 700;
+			font-style: italic;
+			text-transform: uppercase;
+			&:after{
+				background: url("./assets/img/german-symbol01.png") 0 0 no-repeat;
+				content: "";
+				position: absolute;
+				display: block;
+				width: 309px;
+				height: 309px;
+				top: -168px;
+				right: -152%;
+			}
+		}
+	}
+	&.type-e{
+		text-align: center;
+		&:after{
+			background: url("./assets/img/half-red-wave.png") 0 0 no-repeat;
+			content: "";
+			position: absolute;
+			display: block;
+			width: 134%;
+			height: 19px;
+			top: 22%;
+			left: -100%;
+			z-index: 9;
+		}
+		h2{
+			font-size: 52px;
+			color: $c-white;
+			font-weight: 700;
+			font-style: italic;
+		}
+	}
+	&.type-f{
+		text-align: left;
+		margin-bottom: 35px;
+		&:before, &:after{
+			content: "";
+			position: absolute;
+			display: block;
+			width: 148%;
+			height: 19px;
+			bottom: -26px;
+			z-index: 9;
+		}
+		&:before{
+			background: url("./assets/img/half-yellow-wave.png") 0 0 no-repeat;
+			right: 77px;
+		}
+		&:after{
+			background: url("./assets/img/half-yellow-wave.png") 0 0 no-repeat;
+			bottom: -46px;
+			right: 0;
+		}
+		h2{
+			position: relative;
+			display: block;
+			font-size: 38px;
+			color: $c-white;
+			font-weight: 700;
+			font-style: italic;
+			text-transform: uppercase;
+			text-align: left;
+			padding: 0;
+			z-index: 2;
+			letter-spacing: 5px;
+			margin-bottom: 0;
+			&:before{
+				background: url("./assets/img/icons-events.png") 0 0 no-repeat;
+				content: "";
+				position: absolute;
+				display: block;
+				width: 368px;
+				height: 139px;
+				top: -20px;
+				left: -80px;
+				z-index: -1;
+			}
+		}
+		span{
+			background: url("./assets/img/arrows-left.png") 0 0 no-repeat;
+			position: absolute;
+			display: block;
+			top: 70px;
+			right: -35px;
+			width: 121px;
+			height: 100px;
+			z-index: 1;
+		}
+	}
+	&.type-g{
+		text-align: left;
+		align-content: flex-start;
+		align-items: flex-start;
+		margin-bottom: 40px;
+		&:before, &:after{
+			background: url("./assets/img/red-wave.png") 0 0 no-repeat;
+			content: "";
+			position: absolute;
+			display: block;
+			width: 134%;
+			height: 19px;
+			top: 22%;
+			z-index: 9999;
+		}
+		&:before{
+			left: -52%;
+		}
+		&:after{
+			top: -20%;
+			right: -83%;
+		}
+		h2{
+			font-size: 45px;
+			color: $c-red-dark;
+			font-weight: 700;
+			font-style: italic;
+			margin-left: 25%;
+			margin-bottom: 0;
+			margin-top: -3%;
+			z-index: 2;
+			&:before{
+				background: url("./assets/img/icons-photos.png") 0 0 no-repeat;
+				content: "";
+				position: absolute;
+				display: block;
+				width: 629px;
+				height: 162px;
+				top: -120px;
+				left: 13%;
+				z-index: -1;
+			}
+			&:after{
+				background: url("./assets/img/german-symbol02.png") 0 0 no-repeat;
+				content: "";
+				position: absolute;
+				display: block;
+				width: 356px;
+				height: 359px;
+				top: -80px;
+				right: 5%;
+				z-index: -1;
+			}
+		}
+		h3{
+			font-size: 21px;
+			color: $c-white;
+			font-weight: 700;
+			font-style: italic;
+			margin-left: 32%;
+			margin-top: -4px;
+		}
+	}
+	&.type-h{
+		text-align: left;
+		position: absolute;
+		left: 30%;
+		top: 30px;
+		&:before{
+			background: url("./assets/img/half-white-wave.png") 0 0 no-repeat;
+			content: "";
+			position: absolute;
+			display: block;
+			width: 250%;
+			height: 19px;
+			bottom: -20px;
+			right: -70px;
+			z-index: 9;
+		}
+		h2{
+			position: relative;
+			display: block;
+			font-size: 38px;
+			color: $c-white;
+			font-weight: 700;
+			font-style: italic;
+			text-transform: uppercase;
+			text-align: left;
+			padding: 0;
+			z-index: 2;
+			letter-spacing: 5px;
+			margin-bottom: 0;
+		}
+	}
+}
+@include media-breakpoint-down(sm){
+	.wrap-section-title{
+		&.type-a{
+			margin-bottom: 40px;
+			&:before{margin-left: 10%;}
+			&:after{margin-right: 10%;}
+			h2{
+				font-size: 40px;
+				line-height: 1;
+			}
+			h3{
+				font-size: 16px;
+				margin: 0;
+				text-align: center;
+				letter-spacing: 5px;
+				line-height: 1;
+			}
+		}
+		&.type-b{
+			h2{
+				font-size: 20px;
+				&:after{
+					width: 50%;
+					height: 40%;
+					top: 5%;
+					left: 0px;
+					background-size: 50%;
+				}
+			}
+		}
+		&.type-c{
+			h2{
+				font-size: 20px;
+				&:after{
+				    width: 100%;
+				    height: 220%;
+				    top: -30px;
+				    left: 0px;
+				    background-size: 30% 90%;
+				}
+			}
+		}
+		&.type-d{
+			margin-bottom: 40px;
+			&:before, &:after{width: 230%;}
+			&:before{left: -215%;}
+			&:after{right: -215%;}
+			h2{
+				font-size: 30px;
+			}
+		}
+		&.type-e{}
+		&.type-f{
+			margin-bottom: 70px;
+			&:before,&:after{width: 158%;}
+			h2{
+				font-size: 28px;
+				&:before{
+					background-size: 50%;
+					top: -20px;
+					left: -60px;
+				}
+			}
+		}
+		&.type-g{
+			margin-bottom: 40px;
+			&:before, &:after{width: 308%;}
+			&:before{left: -285%;}
+			&:after{right: -285%;}
+			h2{
+				font-size: 30px;
+				&:before{
+					height: 85px;
+					top: -60px;
+					left: 3%;
+					background-size: 50%;
+				}
+				&:after{
+					width: 306px;
+					height: 160px;
+					top: 60%;
+					right: -60%;
+					background-size: 50%;
+				}
+			}
+			h3{
+				font-size: 15px;
+				margin-left: 25%;
+			}
+		}
+		&.type-h{
+			left: 10%;
+			top: 10px;
+			&:before{
+				left: -310%;
+				right: inherit;
+				width: 440%;
+			}
+			h2{
+				font-size: 18px;
+			}
+		}
+	}
+}

@@ -1,0 +1,41 @@
+/*
+	Theme Name: Deutscher Klub
+	Theme URI: 
+	Description: Deutscher Klub WordPress theme.
+	Author: Hugo Lima
+	Author URI: http://hugorlima.com.br
+	Version: 1.0
+	Tags: Deutscher Klub, Clube Alemão, Recife, Pernambuco, Brasil
+	Text Domain: Deutscher Klub
+	License: Unlicense
+	License URI: http://unlicense.org
+*/
+
+// Helpers
+@import "helpers/variables";
+@import "helpers/mixins";
+
+// Bootstrap
+@import "../../node_modules/bootstrap/scss/bootstrap";
+@import "../../node_modules/animate.sass/scss/animate.scss";
+
+// Font Awesome
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
+
+// Base
+@import "base/reset";
+@import "base/utils";
+@import "base/typography";
+
+// Components
+@import "components/anchors";
+@import "components/buttons";
+@import "components/pagination";
+@import "components/section-titles";
+
+// Layout
+@import "layout/masthead";
+@import "layout/footer";
+@import "layout/sections";
+
+// Vendors
