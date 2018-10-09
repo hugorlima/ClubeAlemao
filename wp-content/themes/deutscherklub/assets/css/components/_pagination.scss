@@ -21,7 +21,7 @@
     a, span {
       border: 4px;
       font-weight: 800;
-      color: $c-green-dark;
+      color: $c-red-dark;
       display: inline-block;
       padding: 0px 25px;
       border-radius: 0;
@@ -61,8 +61,8 @@
 
     span.current,
     a:hover {
-      background-color: $c-green-lighten;
-      color: $c-green-dark;
+      background-color: $c-black-lighten;
+      color: $c-black-dark;
       outline: none;
       text-decoration: none;
     }

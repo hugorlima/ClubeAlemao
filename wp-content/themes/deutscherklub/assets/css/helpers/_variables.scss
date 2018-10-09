@@ -14,50 +14,24 @@ $c-white: #ffffff;
 $c-black: #333;
 
 // Palette
-$c-red-lighten: #F2B3B3;
-$c-red: #D42A23;
-$c-red-dark: #AB011C;
+$c-red: #ED1C24;
+$c-red-dark: #C40000;
 
-$c-green-lighten: #B4DEC6;
-$c-green: #289250;
-$c-green-dark: #1C7E3A;
-
-$c-blue-lighten: #B2CAED;
-$c-blue: #2F80ED;
-$c-blue-dark: #175AA9;
-
-$c-yellow-lighten: lighten(#F2B600, 50%);
-$c-yellow: #F2B600;
-$c-yellow-dark: #F2B600;
-
-$c-orange-lighten: #FFE8D4;
-$c-orange: #EB6E00;
-$c-orange-dark: #EB6E00;
+$c-yellow-lighten: #FEB802;
+$c-yellow: #FFCA00;
+$c-yellow-dark: #FAB701;
 
 $c-black-lighten: #D2D2D2;
 $c-black: #333;
 $c-black-dark: #000;
 
 $palette-colors: (
-  'red-lighten': $c-red-lighten,
   'red': $c-red,
   'red-dark': $c-red-dark,
-
-  'green-lighten': $c-green-lighten,
-  'green': $c-green,
-  'green-dark': $c-green-dark,
-
-  'blue-lighten': $c-blue-lighten,
-  'blue': $c-blue,
-  'blue-dark': $c-blue-dark,
 
   'yellow-lighten': $c-yellow-lighten,
   'yellow': $c-yellow,
   'yellow-dark': $c-yellow-dark,
-
-  'orange-lighten': $c-orange-lighten,
-  'orange': $c-orange,
-  'orange-dark': $c-orange-dark,
 
   'black-lighten': $c-black-lighten,
   'black': $c-black,
@@ -95,7 +69,7 @@ $palette-colors: (
 // $purple:  #6f42c1 !default;
 // $pink:    #e83e8c !default;
 // $red:     #dc3545 !default;
-// $orange:  #fd7e14 !default;
+$orange:  #e36100 !default;
 // $yellow:  #ffc107 !default;
 // $green:   #28a745 !default;
 // $teal:    #20c997 !default;
@@ -118,7 +92,7 @@ $palette-colors: (
 //   "gray-dark":  $gray-800
 // ), $colors);
 
-$primary:       $c-green;
+$primary:       $c-white;
 $secondary:     $c-red;
 // $success:       $green !default;
 // $info:          $cyan !default;
@@ -287,7 +261,7 @@ $grid-gutter-width:           20px;
 // // Font, line-height, and color for body text, headings, and more.
 
 // // stylelint-disable value-keyword-case
-$font-family-sans-serif:      "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$font-family-sans-serif:      "IBM Plex Sans Condensed", sans-serif !default;
 $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 $font-family-base:            $font-family-sans-serif !default;
 // // stylelint-enable value-keyword-case
