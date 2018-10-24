@@ -22,29 +22,28 @@
         <title><?php wp_title( '|', true, 'right' ); echo get_bloginfo('description'); ?></title>
         <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans+Condensed:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
         <link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo('stylesheet_directory'); ?>/favicon.ico">
+        <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory');?>/node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory');?>/assets/css/vendor/jquery-ui/jquery-ui.min.css">
         <link rel="stylesheet" href="<?php bloginfo('stylesheet_url');?>">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
         <?php wp_enqueue_script('jquery'); ?>
         <?php wp_head();?>
     </head>
-    <body <?php if(!(is_home() || is_front_page())): echo 'class="internal"'; else: endif; ?>>
+    <body class="<?php if(!(is_home() || is_front_page())): echo 'internal'; else: endif; if(is_page('painel-do-usuario')): echo ' dashboard'; else: endif; ?>">
         <header>
             <div class="container">
                 <div class="row">
                     <h1 class="logo"><a href="<?php bloginfo('url') ?>" alt="Logo Clube Alemão | Deutscher Klub" title="Logo Clube Alemão | Deutscher Klub"><img src="<?php bloginfo('stylesheet_directory') ?>/assets/img/logo.png" alt="Logo Clube Alemão | Deutscher Klub" title="Logo Clube Alemão | Deutscher Klub"></a></h1>
                     <div class="wrap-menu">
                         <div class="col-12 col-sm-6 col-md-4 col-lg-8">
-                            <ul class="menu">
-                                <li><a href="#">Clube</a></li>
-                                <li><a href="#">Serviços</a></li>
-                                <li><a href="#">Esportes</a></li>
-                                <li><a href="#">Gastronomia</a></li>
-                                <li><a href="#">Programação</a></li>
-                                <li><a href="#">Novidades</a></li>
-                                <li><a href="#">Horários</a></li>
-                                <li><a href="#">Reservas</a></li>
-                                <li><a href="#">Contatos</a></li>
-                            </ul>
+                            <?php
+                                wp_nav_menu(
+                                    array(
+                                        'theme_location'  => 'menu-principal',
+                                        'container' => ''
+                                    )
+                                );
+                            ?>
                         </div>
                         <div class="col-12 col-sm-6 col-md-4 col-lg-2">
                             <div class="login">

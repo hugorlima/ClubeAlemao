@@ -5,6 +5,12 @@
 
 		get_template_part('inc', 'home');
 
+	elseif(is_page('painel-do-usuario')):
+
+		the_post();
+		
+		get_template_part('content', 'dashboard');
+
 	elseif(is_page()):
 
 		the_post();

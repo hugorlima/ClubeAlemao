@@ -40,18 +40,31 @@
 		</footer>
 		<?php wp_footer(); ?>
 		<script defer src="https://use.fontawesome.com/releases/v5.2.0/js/all.js" integrity="sha384-4oV5EgaV02iISL2ban6c/RmotsABqE4yZxZLcYMAdG7FAPsyHYAPpywE9PJo+Khy" crossorigin="anonymous"></script>
+		<script src="<?php bloginfo('stylesheet_directory') ?>/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script src="<?php bloginfo('stylesheet_directory') ?>/assets/js/vendor/jquery-ui/jquery-ui.min.js"></script>
 		<script src="<?php bloginfo('stylesheet_directory') ?>/assets/js/custom.min.js"></script>
         <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
 		<script>
 			jQuery(document).ready(function(){
-				jQuery('.news-slider').bxSlider({
+				jQuery('#slide-counter').prepend('Foto <span class="current-index"></span> de ');
+				
+				var slider = jQuery('.photoApproval').bxSlider({
 					pager: false,
-					slideWidth: 390,
-					minSlides: 2,
-					maxSlides: 2,
-					slideSelector: "slide"
+					slideWidth: 307,
+					minSlides: 1,
+					maxSlides: 1,
+			    onSliderLoad: function (currentIndex){
+			        jQuery('#slide-counter .current-index').text(currentIndex + 1);
+			    },
+			    onSlideBefore: function ($slideElement, oldIndex, newIndex){
+			        jQuery('#slide-counter .current-index').text(newIndex + 1);
+			    }
 				});
+				
+				jQuery('#slide-counter').append(slider.getSlideCount());
 			});
+			 
+
 		</script>
     </body>
 </html>

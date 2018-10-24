@@ -39,13 +39,45 @@ header{
 			padding: 0;
 			li{
 				a{
+					background-color: transparent;
+					position: relative;
+					display: block;
 					font-weight: 500;
-					font-size: 17px;
+					font-size: 15px;
 					color: $c-white;
 					text-transform: uppercase;
 					text-decoration: none;
+					padding: 0 7px;
+					-webkit-transition: all ease 0.5s;
+					-moz-transition: all ease 0.5s;
+					-ms-transition: all ease 0.5s;
+					-o-transition: all ease 0.5s;
+					transition: all ease 0.5s;
+					border-radius: 2px;
 					&:hover{
+						background-color: $c-white;
 						color: $c-red;
+						&:after{
+							width: 100%;
+						}
+					}
+					&:after{
+						position: absolute;
+						content: '';
+						top:0;
+						left: 0;
+						width: 0;
+						height: 100%;
+						background-color: $c-white;
+						transform-origin:left;
+						color: $c-red;
+						-webkit-transition: all ease 0.5s;
+						-moz-transition: all ease 0.5s;
+						-ms-transition: all ease 0.5s;
+						-o-transition: all ease 0.5s;
+						transition: all ease 0.5s;
+						z-index:-1;
+						border-radius: 2px;
 					}
 				}
 			}
@@ -79,9 +111,6 @@ header{
 				a{
 					color: $c-white;
 					font-size: 25px;
-					&:hover{
-						color: $c-red;
-					}
 				}
 			}
 		}
@@ -131,19 +160,18 @@ body{
 	&.internal{
 		header{
 		    .logo{
-		    	position: absolute;
-		    	display: block;
-		    	top: 200px;
+		    	top: 130px;
 		    	left: inherit;
 		    	right: 80px;
 		    	margin-bottom: 0;
-		    	a{
-		    		position: relative;
-		    		display: block;
-		    		width: 100%;
-		    		height: 100%;
-		    	}
 		    }
+		}
+	}
+	&.dashboard{
+		header{
+			.logo{
+				left: 2%;
+			}
 		}
 	}
 }
@@ -153,7 +181,7 @@ body{
 		padding: 0;
 		z-index: 99999;
 		.logo{
-			top: 10px;
+			top: 70px;
 			left: 2%;
 			a{
 				img{
@@ -182,6 +210,7 @@ body{
 				visibility: visible;
 				opacity: 1;
 				left: 0;
+				z-index: 9;
 				-webkit-transition: all 300ms ease-in-out;
 				-moz-transition: all 300ms ease-in-out;
 				-ms-transition: all 300ms ease-in-out;
@@ -240,4 +269,27 @@ body{
 			transition: all 300ms ease-in-out;
 		}
 	}
-} 
+	body{
+		&.internal{
+			header{
+				.logo{
+					left: 8%;
+					top: 80px;
+					a{
+						img{
+							width: 60%;
+						}
+					}
+				}
+			}
+		}
+		&.dashboard{
+			header{
+				.logo{
+					left: 4%;
+					top: 24px;
+				}
+			}
+		}
+	}
+}
